@@ -47,6 +47,7 @@ int lcsRecursive(int i, int j, int count, string &str1, string &str2) {
     }
 
     // Recursively check the next characters in both strings
+    // Compare the current characters of both strings with count reset to 0
     count = max(count, max(lcsRecursive(i - 1, j, 0, str1, str2), lcsRecursive(i, j - 1, 0, str1, str2)));
 
     return count;
